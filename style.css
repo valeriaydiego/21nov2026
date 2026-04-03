@@ -1,0 +1,278 @@
+:root {
+    --chedron: #A7321F;
+    --white: #FFFFFF;
+    --text: #505050;
+    --font-main: 'Roboto', sans-serif;
+    --font-accent: 'Parisienne', cursive;
+    --font-serif: 'Noto Serif', serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--text);
+    font-family: var(--font-main);
+    font-size: 24px;
+    line-height: 1.5; /* 150% */
+    text-align: center;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+/* Tipografías específicas */
+h1, .parisienne {
+    font-family: var(--font-accent);
+    font-size: 60px;
+    line-height: 1.25;
+    color: var(--chedron);
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+h2, .noto-serif {
+    font-family: var(--font-serif);
+    font-size: 30px;
+    line-height: 1.25;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.chedron{
+    color: var(--chedron);
+}
+
+
+
+
+
+
+
+/* Estructura de secciones */
+section {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Espaciado entre elementos */
+    align-items: center;
+}
+
+section.half{
+    flex-direction: row;
+    gap: 0px;
+}
+
+.half div.section{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+
+/* banner images */
+.banner-full {
+    padding: 0;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.banner-full img {
+    width: 100%;
+    /* height: 100%; */
+    display: block;
+    height: auto;
+}
+
+/* cover */
+
+#cover{
+    height: 800px;
+}
+
+#cover img{
+    height: 100%;
+}
+
+/* intro */
+.intro{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 600px;
+}
+
+/* ceremonia & itinerario */
+#ceremonia, #recepcion {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+
+#ceremonia .details, #recepcion .details{
+    flex-direction: column;
+    gap: 12px;
+    display: flex;
+    align-items: center;
+    width: 290px;
+}
+
+
+/* itinerario */
+
+#itinerary .lines div{
+    background-color: white;
+    height: 200px;
+    width: 2px;
+    position: relative;
+    top: 20px;
+    right: 40px;
+}
+
+.itinerary-item span{
+    font-weight: 200;
+}
+
+.itinerary-item{
+    width: 315px;
+    display: flex;    
+    gap: inherit;
+}
+
+.itinerary-item p{
+    text-align: left;
+}
+
+
+/* colors */
+
+.bg-chedron {
+    background-color: var(--chedron);
+    color: var(--white);
+}
+
+.bg-chedron h1, .bg-chedron h2 {
+    color: var(--white);
+}
+
+
+/* save the date */
+.save-the-date{
+    display: flex; 
+    gap: 80px;
+    align-items: center;
+}
+
+.save-the-date div{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.save-the-date .number{
+    font-size: 40px;
+    line-height: 1.25;
+}
+
+.save-the-date .timeframe{
+    font-size: 18px;
+    line-height: 1.25;
+}
+
+.save-the-date .separator{
+    background-color: var(--white);
+    height: 50px;
+    width: 1px;
+}
+
+
+
+/* bendicion de padres */
+.padres{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Placeholders de imágenes e íconos */
+.img-placeholder {
+    background: #eee;
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #ccc;
+}
+
+.icon-box {
+    width: 40px;
+    height: 40px;
+    background: rgba(167, 50, 31, 0.1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 12px;
+    border: 1px solid var(--chedron);
+    color: var(--chedron);
+    text-decoration: none;
+    transition: 0.3s;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.btn-fill {
+    background: var(--chedron);
+    color: var(--white);
+}
+
+.details .btn{
+    max-width: 130px;
+}
+
+@media screen and (max-width:400px) {
+    body {
+        font-size: 16px;
+    }
+
+
+    h1, .parisienne {
+        font-size: 32px;
+    }
+
+    h2, .noto-serif {
+        font-size: 20px;
+    }
+
+    section {
+        padding: 32px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Espaciado entre elementos */
+        align-items: center;
+    }
+}

@@ -3,76 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valeria & Diego - Boda</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@300&family=Great+Vibes&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: #fcfbf9; /* Color cremita de tu diseño */
-            color: #5a4a42;
-            text-align: center;
-        }
+    <title>Valeria & Diego</title>
 
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border: 20px solid #fff; /* Marco blanco como en tus capturas */
-            box-sizing: border-box;
-        }
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-        h1 {
-            font-family: 'Great Vibes', cursive;
-            font-size: 4rem;
-            margin-bottom: 10px;
-            font-weight: 400;
-        }
 
-        h2 {
-            font-family: 'Cinzel', serif;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            font-size: 1.2rem;
-        }
 
-        .divider {
-            width: 50px;
-            height: 1px;
-            background-color: #5a4a42;
-            margin: 20px 0;
-        }
-
-        .btn-test {
-            margin-top: 30px;
-            padding: 12px 30px;
-            background-color: #a68b7c; /* El color café rosado de tus botones */
-            color: white;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        .btn-test:hover {
-            background-color: #8e7568;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
-    <section class="hero">
-        <h2>Prueba de Conexión</h2>
-        <h1>Valeria & Diego</h1>
-        <div class="divider"></div>
-        <p>¡Si estás viendo esto, GitHub Pages funciona!</p>
-        <a href="#" class="btn-test">Ir al mapa (Prueba)</a>
+    <section class="banner-full" id="cover">
+        <img src="./fotos/13.jpg" alt="">
     </section>
+
+    <section>
+        <h1 class="parisienne">Nuestro felices para siempre...</h1>
+        <div class="intro">
+             <p class="noto-serif"><strong>21 de noviembre 2026</strong></p>
+            <p>Como diría Luis Miguel, un hombre busca una mujer y Diego ya la encontró. <br>
+            Te invitamos a formar parte y celebrar con nosotros este nuevo capìtulo de nuestras vidas.</p>
+        </div>
+       
+    </section>
+
+    <section class="bg-chedron">
+        <h2 class="noto-serif">Save the date</h2>
+        <div class="save-the-date">
+            <div><span class="number">225</span><span class="timeframe">días</span></div>
+            <div class="separator"></div>
+            <div><span class="number">8</span><span class="timeframe">horas</span></div>
+            <div class="separator"></div>
+            <div><span class="number">45</span><span class="timeframe">minutos</span></div>
+            <div class="separator"></div>
+            <div><span class="number">45</span><span class="timeframe">segundos</span></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Con la bendición de nuestros padres.</h2>
+        <div class="padres">
+            <h2 class="chedron">Padres de la novia</h2>
+            <p>Rocío del Carmen Alcalá Torres <br>
+                Jaime Toscano Vásquez</p>
+        </div>
+        <div class="padres">
+            <h2 class="chedron">Padres del novio</h2>
+            <p>Mayela Guerra Alanís <br>
+                Jaime Larios Pérez</p>
+        </div>
+    </section>
+
+    <section class="banner-full">
+        <img src="./fotos/6.jpg" alt="">
+    </section>
+
+    <section class="half">
+
+        <!-- ceremonia & recepcion -->
+        <div class="section">
+
+            <div id="ceremonia">
+                <!-- church icon -->
+                 <img src="./icons/icon_church_chedron.svg" width="100" alt="">
+                <div class="details">
+                   <h2 class="noto-serif">Ceremonia Religiosa</h2>
+                    <p>María Reina del Palomar<br>5:00 pm</p>
+                    <a href="#" class="btn" role="button">Ver mapa</a> 
+                </div>
+                
+            </div>
+
+            <div id="recepcion">
+                <!-- reception icon -->
+                 <img src="./icons/icon_reception_chedron.svg" width="100" alt="">
+
+
+                <div class="details">
+                    <h2 class="noto-serif">Recepción</h2>
+                    <p>La Dovena<br>7:00 pm</p>
+                    <a href="#" class="btn" role="button">Ver mapa</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="itinerary" class="section bg-chedron">
+
+            <div class="lines">
+                <div></div>
+            </div>
+
+            <!-- ceremonia -->
+            <div class="itinerary-item">
+                <img src="./icons/icon_church_white.svg" width=60 alt="">
+                <p>Ceremonia religiosa <br>
+                    <span>5:00 pm</span></p>
+            </div>
+
+            <!-- coctel -->
+            <div class="itinerary-item">
+                <img src="./icons/icon_coctail_white.svg" width=60 alt="">
+                <p>Coctel <br>
+                    <span>7:00 pm</span></p>
+            </div>
+
+            <!-- recepcion -->
+            <div class="itinerary-item">
+                <img src="./icons/icon_reception_white.svg" width=60 alt="">
+                <p>Recepción <br>
+                    <span>8:00 pm</span></p>
+            </div>
+
+            <!-- cena -->
+            <div class="itinerary-item">
+                <img src="./icons/icon_dinner_white.svg" width=60 alt="">
+                <p>Cena <br>
+                    <span>8:15 pm</span></p>
+            </div>
+
+            <!-- fin -->
+            <div class="itinerary-item">
+                <img src="./icons/icon_end_white.svg" width=60 alt="">
+                <p>Fin del evento <br>
+                    <span>2:00 am</span></p>
+            </div>
+            
+        </div>
+        
+    </section>
+
+    <section>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="icon-box">⛪</div>
+        <h2 class="noto-serif">Ceremonia Religiosa</h2>
+        <p>María Reina del Palomar<br>5:00 pm</p>
+        <a href="#" class="btn">Ver mapa</a>
+
+        <div class="icon-box">🥂</div>
+        <h2 class="noto-serif">Recepción</h2>
+        <p>La Dovena<br>7:00 pm</p>
+        <a href="#" class="btn">Ver mapa</a>
+    </section>
+
+    <div class="banner-full">
+        <div class="img-placeholder" style="min-height: 150px;">IMAGEN PAREJA CAMPO</div>
+    </div>
+
+    <section class="bg-chedron">
+        <h2 class="noto-serif">Itinerario</h2>
+        <div style="text-align: left; width: 100%; max-width: 300px; margin: 0 auto;">
+            <p>• 17:00 hrs - Ceremonia Religiosa</p>
+            <p>• 19:00 hrs - Coctel</p>
+            <p>• 20:30 hrs - Cena</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="noto-serif">Mesa de regalos</h2>
+        <p>Su presencia es nuestro mejor regalo, pero si desean tener un detalle con nosotros...</p>
+        <div style="display: flex; gap: 10px;">
+            <a href="#" class="btn">Liverpool</a>
+            <a href="#" class="btn">Amazon</a>
+        </div>
+    </section>
+
+    <section>
+        <h1 class="parisienne">¿Nos acompañas en este día?</h1>
+        <p>Agradecemos confirmar su asistencia antes del 21 de octubre.</p>
+        <a href="#" class="btn btn-fill">Confirmar asistencia</a>
+    </section>
+
+    <footer class="banner-full">
+        <div class="img-placeholder">IMAGEN FINAL</div>
+    </footer>
 
 </body>
 </html>
