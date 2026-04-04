@@ -1,5 +1,7 @@
 :root {
     --chedron: #A7321F;
+    --chedron-dark: #862819;
+    --chedron-light: #EDD6D2;
     --white: #FFFFFF;
     --text: #505050;
     --font-main: 'Roboto', sans-serif;
@@ -104,15 +106,18 @@ section.no-padding-bottom{
 .banner-full {
     padding: 0;
     width: 100%;
-    height: 500px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.banner-full.height-500 {
+    height: 500px;
+}
+
 .half .section.banner-full {
-    height: auto;
+    height: 655px;
     padding: 0;
     align-self: stretch; /* Se estira al alto del vecino (el texto) */
     display: flex;
@@ -123,7 +128,7 @@ section.no-padding-bottom{
     height: 100%;
     object-fit: cover; /* Esto es MAGIA: rellena el espacio sin estirarse feo */
     display: block;
-    object-position: right; /* <--- ESTA ES LA CLAVE: Alinea al borde derecho */
+    object-position: bottom; /* <--- ESTA ES LA CLAVE: Alinea al borde derecho */
 }
 
 
@@ -255,6 +260,12 @@ section.no-padding-bottom{
 }
 
 /* codigo de vestimenta */
+
+.col-2{
+    display: flex;
+    gap: 80px;
+}
+
 #dress-code-gallery, #image-gallery {
     width: 100%;
     padding: 40px 0;
@@ -403,7 +414,6 @@ section.no-padding-bottom{
     display: inline-block;
     padding: 12px;
     border: 1px solid var(--chedron);
-    color: var(--chedron);
     text-decoration: none;
     transition: 0.3s;
     font-optical-sizing: auto;
@@ -412,9 +422,32 @@ section.no-padding-bottom{
     font-variation-settings: "wdth" 100;
 }
 
-.btn-fill {
-    background: var(--chedron);
+.btn-primary {
+    background-color: var(--chedron);
     color: var(--white);
+    
+}
+
+.btn-secondary {
+    background-color: var(--white);
+    color: var(--chedron);
+}
+
+.btn-primary:hover{
+    background-color: var(--chedron-light);
+    color: var(--chedron-dark);
+}
+
+.btn-secondary:hover{
+    background-color: var(--chedron);
+    color: white;
+    opacity: 0.7;
+}
+
+.btn:active{
+    background-color: var(--chedron-dark);
+    color: white;
+    opacity: 1; 
 }
 
 .details .btn{
