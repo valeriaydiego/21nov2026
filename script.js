@@ -76,7 +76,7 @@ function moveGallery(direction, galleryID) {
     // Calculate max index: total images minus the ones visible
     const totalItems = getTotalImages(galleryObject);
     
-    const visibleItems = 4;
+    const visibleItems = getVisibleItems();
     const maxIndex = totalItems - visibleItems; // Can't slide past the last 4
     currentIndex += direction;
     
@@ -87,7 +87,41 @@ function moveGallery(direction, galleryID) {
     if (currentIndex < 0) currentIndex = 0;
 
     // updateSlider();
-    updateGallery();
+    updateGallery(visibleItems);
+    updateThumbnails(galleryObject);
+    updateButtons(galleryObject);
+}
+
+function getVisibleItems() {
+    const width = window.innerWidth;
+    console.log(width);
+    if (width <= 400) {
+        return 1;
+    } else if (width > 400 && width <= 600) {
+        return 2;
+    } else {
+        return 4;
+    }
+}
+
+function moveGalleryMobile(direction, galleryID) {
+    const galleryObject = document.getElementById(galleryID);
+    // Calculate max index: total images minus the ones visible
+    const totalItems = getTotalImages(galleryObject);
+
+    
+    const visibleItems = getVisibleItems();
+    const maxIndex = totalItems - visibleItems; // Can't slide past the last 4
+    currentIndex += direction;
+    
+    if (currentIndex > maxIndex) {
+        currentIndex = 0;
+        //desactivar boton de next
+    } 
+    if (currentIndex < 0) currentIndex = 0;
+
+    // updateSlider();
+    updateGallery(1);
     updateThumbnails(galleryObject);
     updateButtons(galleryObject);
 }
@@ -99,10 +133,10 @@ function updateButtons(galleryObject){
 }
 
 
-function updateGallery() {
+function updateGallery(visibleItems) {
     const container = document.getElementById('gallerySlider');
     // We move by 25% because each item is 25% of the visible area
-    const percentage = currentIndex * 25; 
+    const percentage = currentIndex * (100/visibleItems); 
     container.style.transform = `translateX(-${percentage}%)`;
 }
 
