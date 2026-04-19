@@ -96,9 +96,13 @@ section.no-padding-bottom{
     width: 50%;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     align-items: center;
     padding: 60px;
+}
+
+.half div.section.double-spacing{
+    gap: 40px;
 }
 
 
@@ -219,6 +223,12 @@ section.no-padding-bottom{
 }
 #itinerary .lines .circle:nth-child(5){
     top: -65px;
+}
+
+.itinerary-items-group {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .itinerary-item span{
@@ -508,6 +518,10 @@ section.no-padding-bottom{
         font-size: 20px;
     }
 
+    #cover {
+        height: 600px;
+    }
+
     #cover h1{
         font-size: 50px;
         top: 80px;
@@ -526,7 +540,11 @@ section.no-padding-bottom{
 
     .half div.section{
         width: 100%;
-        padding: 16px 32px;
+        padding: 32px 16px;
+    }
+
+    .half .section.banner-full {
+        height: 200px;
     }
 
     .save-the-date-banner{
@@ -546,7 +564,7 @@ section.no-padding-bottom{
     }
 
     .save-the-date h2{
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .banner-full.height-500 {
@@ -567,26 +585,26 @@ section.no-padding-bottom{
 
     #itinerary .lines div{
         right: 36px;
-        top: 74px;
+        top: 56px;
         height: 405px;
     }
 
     #itinerary .lines .circle {
         left: -43px;
-        top: 2px;
+        top: -16px;
     }
 
     #itinerary .lines .circle:nth-child(2){
-        top: -336px;
+        top: -354px;
     }
     #itinerary .lines .circle:nth-child(3){
-        top: -250px;
+        top: -270px;
     }
     #itinerary .lines .circle:nth-child(4){
-        top: -166px;
+        top: -186px;
     }
     #itinerary .lines .circle:nth-child(5){
-        top: -80px;
+        top: -100px;
     }
 
 
@@ -604,7 +622,13 @@ section.no-padding-bottom{
     }
 
     .outline-chedron{
-        padding: 16px 32px;
+        padding: 32px 16px;
+        gap: 20px;
+    }
+
+
+    #dress-code-gallery, #image-gallery{
+        padding: 0;
     }
 
 }
