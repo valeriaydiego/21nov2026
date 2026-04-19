@@ -266,26 +266,46 @@ section.no-padding-bottom{
     gap: 80px;
 }
 
-#dress-code-gallery, #image-gallery {
+
+
+#dress-code-gallery, #image-gallery{
     width: 100%;
     padding: 40px 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+
+#dress-code-gallery {
+    /* ... your existing styles ... */
+    touch-action: pan-y; /* Prevents vertical jitter during horizontal swipes */
+}
+
+/* Optional: Improve performance for the sliding animation */
+.gallery-main {
+    will-change: transform;
 }
 
 .gallery-main {
     display: flex;
     width: 100%;
     gap: 10px; /* Espacio entre las imágenes */
-    padding: 0 10px;
+    /* padding: 0 10px; */
+    padding: 0;
+    transition: transform 0.5s ease-in-out; /* This makes it slide smoothly */
+
 }
 
+
 .gallery-item {
-    flex: 1; /* Esto hace que las 4 midan lo mismo siempre */
+    flex: 0 0 calc(25% - 7.5px); /* Forces exactly 4 items per view (minus gap) */
     aspect-ratio: 3 / 4; /* Mantiene la proporción vertical tipo dibujo */
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .gallery-item img {
@@ -293,6 +313,27 @@ section.no-padding-bottom{
     height: 100%;
     object-fit: cover; /* Evita que las fotos se estiren feo */
     display: block;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+    position: absolute;
+    z-index: 10;
+    background: rgba(255,255,255,0.8);
+    border: none;
+    padding: 15px 10px;
+    cursor: pointer;
+    color: var(--chedron);
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.prev { left: 5px; }
+.next { right: 5px; }
+
+.gallery-thumbs img.active {
+    opacity: 1;
+    border: 1px solid var(--chedron);
 }
 
 /* Estilos para las miniaturas de abajo */
@@ -474,5 +515,11 @@ section.no-padding-bottom{
         flex-direction: column;
         gap: 20px; /* Espaciado entre elementos */
         align-items: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .gallery-item {
+        flex: 0 0 calc(50% - 5px); /* Shows 2 items on mobile */
     }
 }

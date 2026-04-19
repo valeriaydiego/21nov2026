@@ -13,8 +13,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 
-
+    <!-- styles -->
     <link rel="stylesheet" href="./style.css">
+
+    <!-- scripts -->
+     <script src="./script.js" defer></script>
 </head>
 <body>
     <section class="banner-full" id="cover">
@@ -74,7 +77,7 @@
                 <div class="details">
                    <h2 class="noto-serif">Ceremonia Religiosa</h2>
                     <p>María Reina del Palomar<br>5:00 pm</p>
-                    <a href="#" class="btn btn-secondary" role="button">Ver mapa</a> 
+                    <a href="https://maps.app.goo.gl/hRETMCgUGmDjnwrA8" target="_blank" class="btn btn-secondary" role="button">Ver mapa</a> 
                 </div>
                 
             </div>
@@ -87,7 +90,7 @@
                 <div class="details">
                     <h2 class="noto-serif">Recepción</h2>
                     <p>La Dovena<br>7:00 pm</p>
-                    <a href="#" class="btn btn-secondary" role="button">Ver mapa</a>
+                    <a href="https://maps.app.goo.gl/YtSLsdrefN6tPn3z6" target="_blank" class="btn btn-secondary" role="button">Ver mapa</a>
                 </div>
 
             </div>
@@ -159,8 +162,8 @@
             <h2 class="noto-serif">Mesa de regalos</h2>
             <p>Lo más importante es tu presencia, pero si deseas hacernos un regalo aquí tienes nuestros datos</p>
             <div class="side-to-side-buttons">
-                <a href="#" class="btn btn-secondary">Liverpool</a>
-                <a href="#" class="btn btn-secondary">Amazon</a>
+                <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51872779" target="_blank" class="btn btn-secondary">Liverpool</a>
+                <a href="https://www.amazon.com.mx/wedding/share/vale-y-diego-nov21" target="_blank" class="btn btn-secondary">Amazon</a>
             </div>
 
             <div class="transferencias">
@@ -194,29 +197,40 @@
 
         <!-- inspo images -->
         <div id="dress-code-gallery">
-            <div class="gallery-main">
-                <div class="gallery-item">
-                    <img src="./fotos/codigo vestimenta/1.png" alt="Dress code 1">
-                </div>
-                <div class="gallery-item">
-                    <img src="./fotos/codigo vestimenta/2.png" alt="Dress code 2">
-                </div>
-                <div class="gallery-item">
-                    <img src="./fotos/codigo vestimenta/3.png" alt="Dress code 3">
-                </div>
-                <div class="gallery-item">
-                    <img src="./fotos/codigo vestimenta/4.png" alt="Dress code 4">
-                </div>
-            </div>
+            <!-- previous button -->
+                <button class="nav-btn prev" onclick="moveGallery(-1, 'dress-code-gallery')">&#10094;</button>
 
-            <div class="gallery-thumbs">
-                <img src="./fotos/codigo vestimenta/1.png" alt="">
-                <img src="./fotos/codigo vestimenta/2.png" alt="">
-                <img src="./fotos/codigo vestimenta/3.png" alt="">
-                <img src="./fotos/codigo vestimenta/4.png" alt="">
-                <img src="./fotos/codigo vestimenta/5.png" alt="">
-                <img src="./fotos/codigo vestimenta/6.png" alt="">
-            </div>
+                <div class="gallery-main" id="gallerySlider">                
+                    <div class="gallery-item">
+                        <img src="./fotos/codigo vestimenta/1.png" alt="Dress code 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./fotos/codigo vestimenta/2.png" alt="Dress code 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./fotos/codigo vestimenta/3.png" alt="Dress code 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./fotos/codigo vestimenta/4.png" alt="Dress code 4">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./fotos/codigo vestimenta/5.png" alt="Dress code 4">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./fotos/codigo vestimenta/6.png" alt="Dress code 4">
+                    </div>
+                </div>
+                <button class="nav-btn next" onclick="moveGallery(1,'dress-code-gallery')">&#10095;</button>
+                <!-- <button class="nav-btn next" onclick="onNext('dress-code-gallery')">&#10095;</button> -->
+
+                <div class="gallery-thumbs">
+                    <img class="active" src="./fotos/codigo vestimenta/1.png" alt="" onclick="goToSlide(0)">
+                    <img class="active" src="./fotos/codigo vestimenta/2.png" alt="" onclick="goToSlide(1,4, 'dress-code-gallery')">
+                    <img class="active" src="./fotos/codigo vestimenta/3.png" alt="" onclick="goToSlide(2,4, 'dress-code-gallery')">
+                    <img class="active" src="./fotos/codigo vestimenta/4.png" alt="" onclick="goToSlide(3,4, 'dress-code-gallery')">
+                    <img src="./fotos/codigo vestimenta/5.png" alt="" onclick="goToSlide(4,4, 'dress-code-gallery')">
+                    <img src="./fotos/codigo vestimenta/6.png" alt="" onclick="goToSlide(5,4, 'dress-code-gallery')">
+                </div>
         </div>
     </section>
 
